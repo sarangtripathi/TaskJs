@@ -12,5 +12,8 @@ function DebitCardType(num) {
   );
   if (re.test(num)) return "Mastercard";
 
+  re = new RegExp("^3[47]d{13}$");
+  if(re.test(num)) return "AMEX";
+
   return "Invalid";
 }
